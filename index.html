@@ -1,157 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Grayscale - Start Bootstrap Theme</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kim HyeongHan</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">KIM</span> HYEONGHAN
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#CV">CV</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<body>
+    <header>
+        <div class="logo">
+            <a href="https://www.nature.com/articles/s41550-023-02164-w" target="_blank">
+                <img src="logo.png" alt="Logo" class="logo-img">
+            </a>
         </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">KIM HYEONGHAN</h1>
-                        <p class="intro-text">UNDER CONSTRUCTION</p>
-                        <p class="intro-text">Galaxy Clusters | Dark Matter | Cosmology<br>Weak Lensing | X-ray | Radio</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="icons">
+            <a href="cv.pdf" class="cv-button">CV</a>
+            <a href="gallery.html" class="gallery-button">Gallery</a>
+            <a href="https://ui.adsabs.harvard.edu/search/p_=0&q=%20author%3A%22hyeonghan%22&sort=date%20desc%2C%20bibcode%20desc" target="_blank">
+                <img src="icon-ads.svg" alt="ads">
+            </a>
+            <a href="https://github.com/hyeonghan" target="_blank">
+                <img src="icon-github-white.png" alt="GitHub">
+            </a>
+            <a href="https://www.instagram.com/hyeonghan__/" target="_blank">
+                <img src="icon-insta.svg" alt="Instagram">
+            </a>
+            <a href="mailto:astro.hh.kim@gmail.com" target="_blank">
+                <img src="icon-gmail.svg" alt="Gmail">
+            </a>
+            <a href="http://narnia.yonsei.ac.kr/mediawiki/index.php/Main_Page" target="_blank">
+                <img src="young_white.png" alt="YOUNG">
+            </a>
         </div>
+        <div class="line"></div>
     </header>
+    <div class="typewriter">
+        <h1 id="typewriter-text"></h1><span class="cursor" id="cursor1">|</span>
+    </div>
+    <div class="container" style="display: none;" id="next-button-container">
+        <a href="#" class="button type--A">
+            <div class="button__line"></div>
+            <div class="button__line"></div>
+            <span class="button__text">AND?</span>
+            <div class="button__drow1"></div>
+            <div class="button__drow2"></div>
+        </a>
+    </div>
+    <div class="typewriter" id="second-typewriter" style="display: none;">
+        <h1 id="typewriter-text2"></h1><span class="cursor" id="cursor2" style="display: none;">|</span>
+    </div>
+    <div class="button-group" style="dispaly: none;" id="button-group">
+    <div class="container" style="display: none;" id="cv-button-container">
+        <a href="cv.pdf" download class="button type--B">
+            <div class="button__line"></div>
+            <div class="button__line"></div>
+            <span class="button__text">DOWNLOAD CV</span>
+            <div class="button__drow1"></div>
+            <div class="button__drow2"></div>
+        </a>
+    </div>
+    <div class="container" style="display: none;" id="next-step-button-container">
+        <a href="gallery.html" class="button type--C">
+            <div class="button__line"></div>
+            <div class="button__line"></div>
+            <span class="button__text">Gallery</span>
+            <div class="button__drow1"></div>
+            <div class="button__drow2"></div>
+        </a>
+    </div>
+</div>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const logoImg = document.getElementById("logo-img");
 
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About HyeongHan</h2>
-                <p>  </p>
-                <p>  </p>
-                <p>  </p>
-            </div>
-        </div>
-    </section>
+            logoImg.addEventListener("mouseenter", function() {
+                this.src = "logo2.png";
+            });
 
-    <!-- Download Section -->
-    <section id="cv" class="content-section text-center">
-        <div class=cv-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>CV</h2>
-                    <p>TBD</p>
-                    <a href="http://hyeonghan.github.io" class="btn btn-default btn-lg">Download (TBD)</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact HyeongHan</h2>
-                <p>Github | Google Scholar | E-mail</p>
-                <p><a href="mailto:astro.hh.kim@gmail.com">astro.hh.kim@gmail.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://github.com/HyeongHan" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://scholar.google.com/citations?user=dPCUM6sAAAAJ&hl=en&authuser=1" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google Scholar</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy;2022</p>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
-
+            logoImg.addEventListener("mouseleave", function() {
+                this.src = "logo.svg";
+            });
+        });
+    </script>
 </body>
-
 </html>
+

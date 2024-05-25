@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* Center the content horizontally */
+    height: 100vh;
+    background-color: #000000;
+    background-image: url('perseus4_resized_optimized.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: flex-start; /* Center align items vertically */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.gallery-button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 4px;
+    margin-right: -10px; /* Adjust as needed for spacing */
+    transition: color 0.3s ease;
+}
+
+.gallery-button:hover {
+    color: #ffcc00; /* Highlight color on hover */
+}
+
+.cv-button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 4px;
+    margin-right  20px; /* Adjust as needed for spacing */
+    transition: color 0.3s ease;
+}
+
+.cv-button:hover {
+    color: #ffcc00; /* Highlight color on hover */
+}
+
+.logo {
+    margin-left: 0;
+}
+
+.logo img {
+    width: 90px;
+    height: auto;
+}
+
+.logo-img {
+    transition: opacity 0.3s ease-in-out; /* Optional transition for smooth effect */
+}
+
+/*
+.logo-img:hover {
+    content: url('logo2.png'); 
+} 
+*/
+
+.icons {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.icons a img {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+}
+
+.line {
+    position: absolute;
+    top: calc(50px);
+    left: 120px;
+    width: calc(100% - 140px);
+    border-top: 2px solid white;
+}
+
+.gallery-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the gallery container horizontally */
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.gallery-box {
+    display: grid;
+    grid-template-columns: repeat(2, 500px); /* Two columns, each 500px wide */
+    gap: 20px;
+    justify-content: center; /* Center the grid */
+    align-items: center; /* Center items vertically */
+    width: 50%; /* Take up the space of its content */
+    max-width: 100%; /* Ensure it doesn't overflow */
+}
+
+.image-box {
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray background */
+    border: 5px solid #909090;
+    border-radius: 0px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0px;
+}
+
+.image-box:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsive design */
+@media (max-width: 1040px) {
+    .gallery-box {
+        grid-template-columns: 1fr; /* Single column for screens smaller than 1040px */
+    }
+}
+

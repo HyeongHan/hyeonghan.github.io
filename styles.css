@@ -1,0 +1,454 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #000000;
+    background-image: url('perseus4_resized_optimized.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.gallery-button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 4px;
+    margin-right: 0px; /* Adjust as needed for spacing */
+    transition: color 0.3s ease;
+}
+
+.gallery-button:hover {
+    color: #ffcc00; /* Highlight color on hover */
+}
+
+.cv-button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 4px;
+    margin-right  20px; /* Adjust as needed for spacing */
+    transition: color 0.3s ease;
+}
+
+.cv-button:hover {
+    color: #ffcc00; /* Highlight color on hover */
+}
+
+
+.logo {
+    margin-left: 0;
+}
+
+.logo img {
+    width: 90px;
+    height: auto;
+}
+
+.logo-img {
+    transition: opacity 0.3s ease-in-out; /* Optional transition for smooth effect */
+}
+
+.logo-img:hover {
+    content: url('logo2.png'); /* Change the image on hover */
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.icons a img {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+}
+
+.line {
+    position: absolute;
+    top: calc(50px);
+    left: 120px;
+    width: calc(100% - 140px);
+    border-top: 2px solid white;
+}
+
+.typewriter {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    padding-top: 2rem;
+    margin-left: 2rem;
+    color: white;
+    position: relative;
+    font-family: 'Courier New', monospace;
+    font-weight: normal;
+}
+
+#second-typewriter {
+    margin-top: -5rem;
+    color: white;
+}
+
+.cursor {
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: bold;
+    animation: blink 0.7s steps(1) infinite;
+    font-size: 2.5rem; /* Match the font size of the typewriter text */
+    margin-top: 15px;
+    position: absolute;
+    background-color: white;
+    color: white;
+}
+
+/* New button styles */
+.type--A {
+    --line_color: #FFFFFF;
+    --back_color: #909090;
+}
+
+.type--B {
+    --line_color: #77DD77;
+    --back_color: #909090;
+}
+
+.type--C {
+    --line_color: #FDFD96;
+    --back_color: #909090;
+}
+
+.button {
+    position: relative;
+    z-index: 0;
+    width: 240px;
+    height: 56px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--line_color);
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.button__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.button::before,
+.button::after,
+.button__text::before,
+.button__text::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--line_color);
+    transition: all 0.5s ease;
+}
+
+.button::before {
+    top: 0;
+    left: 54px;
+    width: calc(100% - 56px * 2 - 16px);
+}
+
+.button::after {
+    top: 0;
+    right: 54px;
+    width: 8px;
+}
+
+.button__text::before {
+    bottom: 0;
+    right: 54px;
+    width: calc(100% - 56px * 2 - 16px);
+}
+
+.button__text::after {
+    bottom: 0;
+    left: 54px;
+    width: 8px;
+}
+
+.button__line {
+    position: absolute;
+    top: 0;
+    width: 56px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.button__line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 300px;
+    border: solid 3px var(--line_color);
+}
+
+.button__line:nth-child(1),
+.button__line:nth-child(1)::before {
+    left: 0;
+}
+
+.button__line:nth-child(2),
+.button__line:nth-child(2)::before {
+    right: 0;
+}
+
+.button:hover {
+    letter-spacing: 6px;
+}
+
+.button:hover::before,
+.button:hover .button__text::before {
+    width: 8px;
+}
+
+.button:hover::after,
+.button:hover .button__text::after {
+    width: calc(100% - 56px * 2 - 16px);
+}
+
+.button__drow1,
+.button__drow2 {
+    position: absolute;
+    z-index: -1;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+}
+
+.button__drow1 {
+    top: -16px;
+    left: 40px;
+    width: 32px;
+    height: 0;
+    transform: rotate(30deg);
+}
+
+.button__drow2 {
+    top: 44px;
+    left: 77px;
+    width: 32px;
+    height: 0;
+    transform: rotate(-127deg);
+}
+
+.button__drow1::before,
+.button__drow1::after,
+.button__drow2::before,
+.button__drow2::after {
+    content: '';
+    position: absolute;
+}
+
+.button__drow1::before {
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-60deg);
+}
+
+.button__drow1::after {
+    top: -10px;
+    left: 45px;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(69deg);
+}
+
+.button__drow2::before {
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-146deg);
+}
+
+.button__drow2::after {
+    bottom: 26px;
+    left: -40px;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-262deg);
+}
+
+.button__drow1,
+.button__drow1::before,
+.button__drow1::after,
+.button__drow2,
+.button__drow2::before,
+.button__drow2::after {
+    background: var(--back_color);
+}
+
+.button:hover .button__drow1 {
+    animation: drow1 ease-in 0.06s;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow1::before {
+    animation: drow2 linear 0.08s 0.06s;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow1::after {
+    animation: drow3 linear 0.03s 0.14s;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow2 {
+    animation: drow4 linear 0.06s 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow2::before {
+    animation: drow3 linear 0.03s 0.26s;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow2::after {
+    animation: drow5 linear 0.06s 0.32s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drow1 {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100px;
+    }
+}
+
+@keyframes drow2 {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    11% {
+        opacity: 1;
+    }
+    100% {
+        width: 120px;
+    }
+}
+
+@keyframes drow3 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80px;
+    }
+}
+
+@keyframes drow4 {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 120px;
+    }
+}
+
+@keyframes drow5 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 124px;
+    }
+}
+
+/* 本体には関係ないスタイル */
+.container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin-left: 50px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Adjust gap as needed */
+    margin-top: 20px;
+}
+
+.button:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+/* Add these styles for the gallery */
+.gallery-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.gallery-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.image-box {
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray background */
+    border: 2px solid rgba(255, 255, 255, 0.7); /* Border */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.image-box:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
