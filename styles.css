@@ -91,7 +91,7 @@ header {
     font-size: 1.8rem;
     padding-top: 2rem;
     margin-left: 2rem;
-    color: white;
+    color: #98FB98;
     position: relative;
     font-family: 'Courier New', monospace;
     font-weight: normal;
@@ -99,8 +99,9 @@ header {
 
 #second-typewriter {
     margin-top: -5rem;
-    color: white;
+    color: #98FB98;
 }
+
 
 .cursor {
     display: inline-block;
@@ -110,8 +111,14 @@ header {
     font-size: 2.5rem; /* Match the font size of the typewriter text */
     margin-top: 15px;
     position: absolute;
-    background-color: white;
-    color: white;
+    background-color: #98FB98;
+    color: #98FB98;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 /* New button styles */
@@ -121,7 +128,7 @@ header {
 }
 
 .type--B {
-    --line_color: #77DD77;
+    --line_color: #87CEEB;
     --back_color: #909090;
 }
 
